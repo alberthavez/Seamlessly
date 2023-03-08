@@ -52,6 +52,13 @@ public class Driver {
             switch (browserType){
                 case "chrome":
 
+                    WebDriverManager.chromedriver().setup();
+                    driverPool.set(new ChromeDriver());
+                    driverPool.get().manage().window().maximize();
+                    driverPool.get().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+
+                    /*
+
                     ChromeOptions options = new ChromeOptions();
                     Map<String, Object> prefs = new HashMap<String, Object>();
                     prefs.put("intl.accept_languages", "en-GB");
@@ -59,6 +66,9 @@ public class Driver {
                     WebDriverManager.chromedriver().setup();
                     //WebDriver driver = new ChromeDriver(options);
                     driverPool.set(new ChromeDriver(options));
+
+                     */
+                    driverPool.set(new ChromeDriver());
                     driverPool.get().manage().window().maximize();
                     driverPool.get().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
                     break;

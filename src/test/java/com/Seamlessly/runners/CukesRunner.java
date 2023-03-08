@@ -10,8 +10,8 @@ import org.junit.runner.RunWith;
              //   "pretty",
                 "html:target/cucumber-reports.html",
                 "rerun:target/rerun.txt",
-            //    "json:target/cucumber.json",
-                "me.jvt.cucumber.report.PrettyReports:target/cucumber"
+                "json:target/cucumber.json",
+        //        "me.jvt.cucumber.report.PrettyReports:target/cucumber"
         } ,
         features = "src/test/resources/features",
         glue = "com/Seamlessly/step_definitions",

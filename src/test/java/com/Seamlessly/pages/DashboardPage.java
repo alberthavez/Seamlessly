@@ -12,10 +12,10 @@ public class DashboardPage {
     }
 
 
-    @FindBy (xpath = "//div[@id='expand']")
+    @FindBy (xpath = "//*[@id=\"expand\"]/div")
     public WebElement profilePictureBtn;
 
-    @FindBy (linkText = "Log out")
+    @FindBy (xpath = "//*[@id='expanddiv']/ul/li[5]/a")
     public WebElement logOutBtn;
 
 

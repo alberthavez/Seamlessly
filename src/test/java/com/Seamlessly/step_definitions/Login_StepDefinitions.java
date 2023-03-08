@@ -9,6 +9,7 @@ import io.cucumber.java.en.When;
 import org.junit.Assert;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
 import java.time.Duration;
 
 public class Login_StepDefinitions {
@@ -59,6 +60,11 @@ public class Login_StepDefinitions {
         LoginPage.passwordInputBox.sendKeys(string, Keys.ENTER);
     }
 
+    @Then("verify that -Wrong username or password.- message is displayed")
+    public void verify_that_wrong_username_or_password_message_is_displayed() {
+        Assert.assertTrue(LoginPage.wrongPasswordMSG.isDisplayed());
+    }
+
     @Then("verify that user is not on the dashboard")
     public void verify_that_user_is_not_on_the_dashboard() {
         Assert.assertNotEquals("Pano - Seamlessly", Driver.getDriver().getTitle());
@@ -68,6 +74,12 @@ public class Login_StepDefinitions {
     @Then("Click Login button or hit enter key again without passing any username or password")
     public void click_login_button_or_hit_enter_key_again_without_passing_any_username_or_password(io.cucumber.datatable.DataTable dataTable) {
         LoginPage.passwordInputBox.sendKeys(Keys.ENTER);
+    }
+
+    @Then("verify that -please fill out this field- message is displayed")
+    public void verify_that_please_fill_out_this_field_message_is_displayed() {
+        String validationMessage = LoginPage.passwordInputBox.getAttribute("validationMessage");
+        Assert.assertEquals(validationMessage, "Please fill in this field.");
     }
 
     @Then("password must be seen as dots")
@@ -80,8 +92,6 @@ public class Login_StepDefinitions {
     public void user_enters_email_and_password(String string, String string2) {
         LoginPage.emailInputBox.sendKeys(string);
         LoginPage.passwordInputBox.sendKeys(string);
-
-
     }
 
     @When("click to the eye button")
@@ -92,7 +102,6 @@ public class Login_StepDefinitions {
     @Then("user should see the password explicitly")
     public void user_should_see_the_password_explicitly() {
         Assert.assertTrue(LoginPage.passwordAsText.isDisplayed());
-
     }
 
 

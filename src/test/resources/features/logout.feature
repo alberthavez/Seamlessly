@@ -1,3 +1,5 @@
+
+@wip
 Feature: US-002 Log out Functionality Automation-AMH
 
 
@@ -9,7 +11,7 @@ Feature: US-002 Log out Functionality Automation-AMH
   Scenario: User can log out and ends up in login page
     When  click to the profilePicture button on the right corner of the dashboard
     And click to logout button
-    Then verify that user is on login-page
+    Then verify that user is on the login-page
 
   Scenario: User can not go to home page again by clicking step back button after successfully logged out
     When  click to the profilePicture button on the right corner of the dashboard

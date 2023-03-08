@@ -1,4 +1,4 @@
-@wip
+
 Feature: US-001 Login Functionality Automation-AMH
 
 
@@ -21,25 +21,25 @@ Feature: US-001 Login Functionality Automation-AMH
     When Invalid username should be entered "invalidUserName"
     And Invalid password should be entered "invalidPassword"
     And Click Login button
-    Then verify that user is not on the dashboard
+    Then verify that -Wrong username or password.- message is displayed
 
   Scenario: User can not login with invalid username and valid password
     When Invalid username should be entered "employee140"
     And Invalid password should be entered "Employee123"
     And Click Login button
-    Then verify that user is not on the dashboard
+    Then verify that -Wrong username or password.- message is displayed
 
   Scenario: User can not login with valid username and invalid password
     When Invalid username should be entered "Employee140"
     And Invalid password should be entered "employee123"
     And Click Login button
-    Then verify that user is not on the dashboard
+    Then verify that -Wrong username or password.- message is displayed
 
   Scenario: User can not login with empty username and empty password
     When Invalid username should be entered ""
     And Invalid password should be entered ""
     And Click Login button
-    Then verify that user is not on the dashboard
+    Then verify that -please fill out this field- message is displayed
 
   Scenario: User can see the password in a form of dots by default
     When user enters email "Employee140" and password "Employee123"

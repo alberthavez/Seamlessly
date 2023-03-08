@@ -22,7 +22,7 @@
                 <configuration>
                     <parallel>methods</parallel>
                     <threadCount>4</threadCount>
-                    <perCoreThreadCount>true</perCoreThreadCount>
+                    <perCoreThreadCount>false</perCoreThreadCount>
                     <testFailureIgnore>true</testFailureIgnore>
                     <includes>
                         <include>**/CukesRunner*.java</include>
@@ -45,7 +45,7 @@
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-java</artifactId>
-            <version>4.8.1</version>
+            <version>3.141.59</version>
         </dependency>
         <!--
         https://mvnrepository.com/artifact/io.github.bonigarcia/webdrive
@@ -83,12 +83,14 @@
             <version>5.2.3</version>
         </dependency>
 
-        <!--If you want to get rid of SLF4J Failed to load message from the console -->
+        <!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-nop -->
         <dependency>
             <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-simple</artifactId>
-            <version>1.7.32</version>
+            <artifactId>slf4j-nop</artifactId>
+            <version>2.0.6</version>
+            <scope>test</scope>
         </dependency>
+
 
     </dependencies>
 

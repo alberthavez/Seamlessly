@@ -79,7 +79,7 @@ public class Login_StepDefinitions {
     @Then("verify that -please fill out this field- message is displayed")
     public void verify_that_please_fill_out_this_field_message_is_displayed() {
         String validationMessage = LoginPage.passwordInputBox.getAttribute("validationMessage");
-        Assert.assertEquals(validationMessage, "Please fill in this field.");
+        Assert.assertEquals(validationMessage, "Please fill out this field.");
     }
 
     @Then("password must be seen as dots")

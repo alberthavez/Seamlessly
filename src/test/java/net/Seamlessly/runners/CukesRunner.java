@@ -1,4 +1,4 @@
-package com.Seamlessly.runners;
+package net.Seamlessly.runners;
 
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
@@ -14,11 +14,11 @@ import org.junit.runner.RunWith;
         //        "me.jvt.cucumber.report.PrettyReports:target/cucumber"
         } ,
         features = "src/test/resources/features",
-        glue = "com/Seamlessly/step_definitions",
+        glue = "net/Seamlessly/step_definitions",
         dryRun=false,
    //     stepNotifications = true,
 
-        tags="",
+        tags="@wip",
         publish = false
 
 

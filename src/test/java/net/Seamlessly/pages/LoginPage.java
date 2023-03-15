@@ -1,6 +1,6 @@
-package com.Seamlessly.pages;
+package net.Seamlessly.pages;
 
-import com.Seamlessly.utilities.Driver;
+import net.Seamlessly.utilities.Driver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;

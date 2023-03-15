@@ -1,17 +1,17 @@
-package com.Seamlessly.step_definitions;
+package net.Seamlessly.step_definitions;
 
-import com.Seamlessly.pages.DashboardPage;
-import com.Seamlessly.pages.LoginPage;
-import com.Seamlessly.utilities.ConfigurationReader;
-import com.Seamlessly.utilities.Driver;
+import net.Seamlessly.pages.DashboardPage;
+import net.Seamlessly.pages.LoginPage;
+import net.Seamlessly.utilities.ConfigurationReader;
+import net.Seamlessly.utilities.Driver;
 import io.cucumber.java.en.*;
 import org.junit.Assert;
 
 public class Logout_StepDefinitions {
 
 
-    DashboardPage DashboardPage= new DashboardPage();
-    LoginPage LoginPage = new LoginPage();
+    net.Seamlessly.pages.DashboardPage DashboardPage= new DashboardPage();
+    net.Seamlessly.pages.LoginPage LoginPage = new LoginPage();
 
     @Given("user is on loginpage")
     public void user_is_on_loginpage() {

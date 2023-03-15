@@ -1,4 +1,4 @@
-package com.Seamlessly.utilities;
+package net.Seamlessly.utilities;
 
 import java.io.FileInputStream;
 import java.io.IOException;

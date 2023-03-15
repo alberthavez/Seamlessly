@@ -1,6 +1,6 @@
-package com.Seamlessly.step_definitions;
+package net.Seamlessly.step_definitions;
 
-import com.Seamlessly.utilities.Driver;
+import net.Seamlessly.utilities.Driver;
 import io.cucumber.java.After;
 import io.cucumber.java.Scenario;
 import org.openqa.selenium.OutputType;

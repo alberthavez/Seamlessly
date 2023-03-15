@@ -1,21 +1,16 @@
-package com.Seamlessly.step_definitions;
+package net.Seamlessly.step_definitions;
 
-import com.Seamlessly.pages.LoginPage;
-import com.Seamlessly.utilities.ConfigurationReader;
-import com.Seamlessly.utilities.Driver;
-import io.cucumber.java.en.Given;
-import io.cucumber.java.en.Then;
-import io.cucumber.java.en.When;
+import net.Seamlessly.pages.LoginPage;
+import net.Seamlessly.utilities.ConfigurationReader;
+import net.Seamlessly.utilities.Driver;
+import io.cucumber.java.en.*;
 import org.junit.Assert;
 import org.openqa.selenium.Keys;
-import org.openqa.selenium.support.ui.WebDriverWait;
-
-import java.time.Duration;
 
 public class Login_StepDefinitions {
 
 
-    LoginPage LoginPage = new LoginPage();
+    net.Seamlessly.pages.LoginPage LoginPage = new LoginPage();
 
     @Given("user is on the login-page")
     public void user_is_on_the_login_page() {

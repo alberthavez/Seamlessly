@@ -1,4 +1,4 @@
-package com.Seamlessly.runners;
+package net.Seamlessly.runners;
 
 
 import io.cucumber.junit.*;

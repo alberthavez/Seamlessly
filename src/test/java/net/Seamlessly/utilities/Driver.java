@@ -3,8 +3,11 @@ package net.Seamlessly.utilities;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeOptions;
+import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
@@ -15,6 +18,11 @@ import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
 public class Driver {
+
+
+    static String browser;
+
+    static ChromeOptions option = new ChromeOptions();
 
     /*
     Creating a private constructor, so we are closing
@@ -35,7 +43,7 @@ public class Driver {
     Create a re-usable utility method which will return same driver instance when we call it
      */
     public static WebDriver getDriver() {
-
+        option.addArguments("--remote-allow-origins=*");
         if (driverPool.get() == null) {
 
             /*

@@ -12,6 +12,7 @@ public class DashboardPage {
     }
 
 
+
     @FindBy (xpath = "//*[@id=\"expand\"]/div")
     public WebElement profilePictureBtn;
 

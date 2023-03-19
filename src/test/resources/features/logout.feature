@@ -1,5 +1,5 @@
 
-@SEAMLES10-430 @wip
+@SEAMLES10-430
 Feature: US-002 Log out Functionality Automation-AMH
 
 

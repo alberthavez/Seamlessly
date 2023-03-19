@@ -74,9 +74,13 @@ public class Login_StepDefinitions {
     @Then("verify that -please fill out this field- message is displayed")
     public void verify_that_please_fill_out_this_field_message_is_displayed() {
         String validationMessage = LoginPage.passwordInputBox.getAttribute("validationMessage");
-        Assert.assertEquals(validationMessage, "Please fill out this field.");
+        Assert.assertEquals("Please fill out this field.",validationMessage);
     }
-
+    @Then("verify that -please fill out this field- message is displayed on usernamebox")
+    public void verify_that_please_fill_out_this_field_message_is_displayed_on_usernamebox() {
+        String validationMessage = LoginPage.emailInputBox.getAttribute("validationMessage");
+        Assert.assertEquals("Please fill out this field.",validationMessage);
+    }
     @Then("password must be seen as dots")
     public void password_must_be_seen_as_dots() {
         Assert.assertEquals("password", LoginPage.passwordInputBox.getAttribute("type"));
@@ -108,7 +112,8 @@ public class Login_StepDefinitions {
     @Then("user must see Reset password button")
     public void user_must_see_reset_password_button() {
         //     WebDriverWait wait=new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(3));
-        Assert.assertTrue(LoginPage.resetPasswordBtn.isDisplayed());
+     //   Assert.assertTrue(LoginPage.resetPasswordBtn.isDisplayed());
+        Assert.assertEquals("Reset Password",LoginPage.resetPasswordBtn.getAttribute("value"));
     }
 
 

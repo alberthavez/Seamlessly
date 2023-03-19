@@ -1,4 +1,4 @@
-@SEAMLES10-429
+@SEAMLES10-429 @wip
 Feature: US-001 Login Functionality Automation-AMH
 
 
@@ -45,7 +45,7 @@ Feature: US-001 Login Functionality Automation-AMH
     When Invalid username should be entered ""
     And user clicks to password input box and enter password "Employee123"
     And Click Login button
-    Then verify that -please fill out this field- message is displayed
+    Then verify that -please fill out this field- message is displayed on usernamebox
 @SEAMLES10-422
   Scenario: User can not login with empty username and empty password
     When Invalid username should be entered ""

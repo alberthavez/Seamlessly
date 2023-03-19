@@ -78,7 +78,7 @@ public class Driver {
                     break;
                 case "remote-chrome":
                     // assign your grid server address
-                    String gridAdress = "3.216.30.92"; // put your own Linux grid IP here
+                    String gridAdress = "100.26.234.50"; // put your own Linux grid IP here
                     try {
                         URL url = new URL("http://" + gridAdress + ":4444/wd/hub");
                         DesiredCapabilities desiredCapabilities = new DesiredCapabilities();

@@ -1,7 +1,6 @@
 @SEAMLES10-429 @wip
 Feature: US-001 Login Functionality Automation-AMH
 
-
   Background:
     Given user is on the login-page
 
